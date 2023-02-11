@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="shortcut icon" href="imagess/download (4).jpg" type="image/x-icon">
+    <style>
+        table {
+            width: 100%;
+            background-color: darkolivegreen;
+        }
+
+
+        thead tr td {
+            color: rgb(245, 6, 54);
+            text-decoration: solid;
+        }
+
+        table {
+            border-color: burlywood;
+        }
+
+        table caption {
+            color: darkmagenta;
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function td2() {
+            window.alert('This is Good book in the market')
+        }
+        function td1() {
+            window.alert('This is best book in the market')
+        }
+        function td3() {
+            window.alert('This is best book in the market')
+        }
+    </script>
+</head>
+
+<body>
+
+    <table border="2">
+        <caption>Book inventry</caption>
+        <thead>
+            <tr>
+                <td>S.NO</td>
+                <td>Book Name</td>
+
+
+                <td>Images</td>
+                <td>Remark/Rating</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Java Book</td>
+                <td><img src="imagess/download.jpg" alt="java"></td>
+                <td id="td1" onclick="td1()">👍 click here for review</td>
+            </tr>
+
+        </tbody>
+        <tbody>
+            <tr>
+                <td>2</td>
+                <td>C sharp Book</td>
+                <td><img src="imagess/download (1).jpg" alt="c#"></td>
+                <td id="td2" onclick="td2()">👎 click here for review</td>
+            </tr>
+
+        </tbody>
+        <tbody>
+            <tr>
+                <td>3</td>
+                <td>Operating System</td>
+                <td><img src="imagess/31q6ZvINxGL._BO1,204,203,200_.jpg" alt="c#"></td>
+                <td id="td3" onclick="td3()">👍 click here for review</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">&#169; Copyrighted</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!-- <p>&#128512;</p> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priority Selection</title>
+    <script>
+        function setPriority() {
+
+            arr = [];
+            arr[0] = document.pf1.java.value;
+            //document.write(arr[0]);
+            arr[1] = document.pf1.python.value;
+            arr[2] = document.pf1.dotnet.value;
+            arr[3] = document.pf1.os.value;
+
+
+            document.getElementById("p1").innerHTML = "java is your priority no" + " " + arr[0];
+            document.getElementById("p2").innerHTML = "python is your priority no" + " " + arr[1];
+            document.getElementById("p3").innerHTML = "dotnet is your priority no" + " " + arr[2];
+            document.getElementById("p4").innerHTML = "os is your priority no" + " " + arr[3];
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <form action="get" name="pf1">
+        <table>
+            <tr>
+                <td><label for="java">java</label></td>
+                <td><input type="checkbox" id="c1" value="java"></td>
+                <td><input type="number" name="java" placeholder="Priority"></td>
+            </tr>
+            <tr>
+                <td><label for="python">python</label></td>
+                <td><input type="checkbox" id="c2" value="python"></td>
+                <td><input type="number" name="python" placeholder="Priority"></td>
+            </tr>
+            <tr>
+                <td><label for="dotnet">dotnet</label></td>
+                <td><input type="checkbox" id="c3" value="dotnet"></td>
+                <td><input type="number" name="dotnet" placeholder="Priority"></td>
+            </tr>
+            <tr>
+                <td><label for="os">os</label></td>
+                <td><input type="checkbox" id="c4" value="os"></td>
+                <td><input type="number" name="os" placeholder="Priority"></td>
+            </tr>
+
+        </table>
+        <input type="button" value="submit" onclick="setPriority()">
+    </form>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+
+</body>
+
+</html>

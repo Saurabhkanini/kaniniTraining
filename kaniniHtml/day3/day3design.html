@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day3 design</title>
+
+    <style>
+        .right {
+            position: absolute;
+            right: 6%;
+            width: 25%;
+            height: 300px;
+            text-align: center;
+            background-color: rgb(10, 147, 104);
+
+        }
+
+        .center {
+            position: absolute;
+            right: 37%;
+            width: 25%;
+            height: 300px;
+            text-align: center;
+            background-color: rgb(10, 147, 104);
+
+
+
+        }
+
+        .left {
+            position: absolute;
+            left: 7%;
+            width: 25%;
+            height: 300px;
+            text-align: center;
+            background-color: rgb(10, 147, 104);
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div
+        style="background-color: rgba(79, 84, 88, 0.817); width: 100%; height: 50px; margin-top: 10px; margin-bottom: 10px; text-align: center;">
+        <h1>Logo</h1>
+
+    </div>
+    <div
+        style="background-color: rgba(79, 84, 88, 0.817); width: 100%; height: 50px; margin-top: 10px; margin-bottom: 10px; text-align: center;">
+        <a href="">Home</a>
+        <a href="">About </a>
+        <a href="">Product</a>
+        <a href="">Service</a>
+        <a href="">Contact</a>
+
+
+    </div>
+    <div
+        style="background-color: rgba(79, 84, 88, 0.817); width: 100%; height: 50px; margin-top: 10px; margin-bottom: 10px; text-align: center;">
+        <h2>Features</h2>
+
+    </div>
+    <div style=" width: 100%; height: 300px; margin-top: 10px; margin-bottom: 10px; ">
+        <div class="right">
+            <h1>Column 3</h1>
+
+        </div>
+        <div class="center">
+            <h1>Column 2</h1>
+
+        </div>
+        <div class="left">
+            <h1>Column 3</h1>
+
+        </div>
+
+
+    </div>
+    <div style="background-color: rgba(79, 84, 88, 0.817); width: 100%; height: 50px;">
+
+        <p style="text-align: center;" id="b1"></p>
+
+    </div>
+    <script>
+        currentYear = new Date().getFullYear();
+        console.log(currentYear);
+        document.getElementById("b1").innerHTML = "	&#169; " + "Copyright" + " " + currentYear;
+
+    </script>
+
+
+</body>
+
+</html>

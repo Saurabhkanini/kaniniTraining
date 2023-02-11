@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="imagess/download (4).jpg" type="image/x-icon">
+    <script>
+        function calculate() {
+            var operation = document.t1.operation.value;
+            //document.write(operation);
+
+            var input1 = parseInt(document.t1.input1.value);
+            console.log(input1);
+            var input2 = parseInt(document.t1.input2.value);
+            console.log(input2);
+            var result = 0;
+
+            if (operation == "add") {
+                result = input1 + input2;
+                //document.getElementById("output").innerHTML = result;
+                //console.log(result);
+                document.getElementById("output").innerHTML = result;
+            }
+            if (operation == "sub") {
+                result = input1 - input2;
+                document.getElementById("output").innerHTML = result;
+            }
+            if (operation == "mul") {
+                result = input1 * input2;
+                document.getElementById("output").innerHTML = result;
+            }
+            if (operation == "div") {
+                result = input1 / input2;
+                document.getElementById("output").innerHTML = result;
+            }
+
+        }
+    </script>
+    <style>
+        .submitbtn {
+            width: 57;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="get" name="t1">
+        <h1>Calculator</h1>
+        <table>
+
+            <tr>
+                <img src="imagess/calculator.jpeg" alt="calculator image">
+            </tr>
+            <tr>
+                <td><label for="input1">Input1</label></td>
+                <td><input type="number" name="input1"></td>
+            </tr>
+            <tr>
+                <td><label for="input2">Input1</label></td>
+                <td><input type="number" name="input2"></td>
+            </tr>
+            <tr>
+                <td><label for="calculate">operation</label></td>
+                <td><select name="operation" id="operation">
+                        <option value="add">+</option>
+                        <option value="sub">-</option>
+                        <option value="mul">x</option>
+                        <option value="div">/</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><button type="button" value="submit" onclick="calculate()">
+                        <img src="imagess/submit1.png" alt="submit button" style="width:50px">
+                    </button>
+                </td>
+                <td><button type="reset">
+                        <img src="imagess/reset1.png" alt="reset image" style="width:33px">
+                    </button></td>
+            </tr>
+
+        </table>
+
+    </form>
+    <p id="output"></p>
+
+
+</body>
+
+</html>

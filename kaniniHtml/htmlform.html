@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="shortcut icon" href="imagess/download (4).jpg" type="image/x-icon">
+    <script>
+        function fetch() {
+            name = document.f1.t1.value;
+            email = document.f1.email.value;
+            gender = document.f1.gender.value;
+            dob = document.f1.dob.value;
+            branch = document.f1.branch.value;
+            address = document.f1.address.value;
+
+            subjects = "";
+            java = document.getElementById("c1");
+            python = document.getElementById("c2");
+            net = document.getElementById("c3");
+            if (java.checked == true) {
+                subjects += "java";
+            }
+            if (python.checked == true) {
+                subjects += "python";
+            }
+            if (net.checked == true) {
+                subjects += "dotnet";
+            }
+
+
+            document.getElementById("p1").innerHTML = "Welcome" + " " + name.bold();
+            document.getElementById("p2").innerHTML = "Email is" + " " + email.bold();
+            document.getElementById("p3").innerHTML = "Gender is" + " " + gender.bold();
+            document.getElementById("p4").innerHTML = "Date of birth is" + " " + dob.bold();
+            document.getElementById("p5").innerHTML = "Branch is" + " " + branch.bold();
+            document.getElementById("p6").innerHTML = "Address is" + " " + address.bold();
+            document.getElementById("p7").innerHTML = "subject is" + " " + subjects;
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <form name="f1" autocomplete="on" method="get">
+        <fieldset>
+            <legend>Fill All the detail</legend>
+            <table>
+                <caption>Registration</caption>
+                <tr>
+                    <td><label for="name">UserName:</label></td>
+                    <td><input type="text" name="t1" placeholder="UserName"></td>
+                </tr>
+                <tr>
+                    <td><label for="Email">Email:</label></td>
+                    <td><input type="email" name="email" placeholder="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="password">password</label></td>
+                    <td><input type="password" placeholder="password"></td>
+                </tr>
+                <tr>
+                    <td><label for="Gender">Gender</label></td>
+                    <td><input type="radio" name="gender" value="male">male</td>
+                    <td><input type="radio" name="gender" value="female">female</td>
+
+                </tr>
+                <tr>
+                    <td><label for="date">Date of Birth</label></td>
+                    <td><input type="date" name="dob"></td>
+                </tr>
+                <tr>
+                    <td><label for="Branch">B.Tech(Branch)</label></td>
+                    <td><select name="branch" id="branch">
+                            <option value="Cse">CSE</option>
+                            <option value="Civil">CIVIL</option>
+                            <option value="Mechanical">Mechanical</option>
+                            <option value="Electrical">Electrical</option>
+                        </select>
+
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="address">Addresss</label>
+                    </td>
+                    <td><textarea name="address" id="add" cols="30" rows="10" placeholder="Address"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="Resume">Resume</label></td>
+                    <td><input type="file" name="resume"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="java">java</label></td>
+                    <td><input type="checkbox" name="java" id="c1" value="java"></td>
+                </tr>
+                <tr>
+                    <td><label for="python">python</label></td>
+                    <td><input type="checkbox" name="python" id="c2" value="python"></td>
+                </tr>
+                <tr>
+                    <td><label for=".net">dotnet</label></td>
+                    <td><input type="checkbox" name="dotnet" id="c3" value="dotnet"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="click me" onclick="fetch()"></td>
+                </tr>
+
+
+
+            </table>
+        </fieldset>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+        <p id="p4"></p>
+        <p id="p5"></p>
+        <p id="p6"></p>
+        <p id="p7"></p>
+
+
+    </form>
+
+</body>
+
+</html>
